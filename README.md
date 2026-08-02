@@ -149,5 +149,3 @@ Built with care, caffeine, and a deep respect for performance.
 MIT — Use it, modify it, share it.
 
 ---
-
-> *"Archives open. The lamp is lit. The words are waiting."*
