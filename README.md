@@ -1,0 +1,1 @@
+# extension-helps-find-words
