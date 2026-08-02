@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- ===== HEADER: Logo + Case-Sensitive Toggle ===== -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">🔍</span>
+        <span class="logo-text">Highlight Finder</span>
+      </div>
+      <label class="toggle" title="Phân biệt chữ hoa/thường">
+        <input type="checkbox" id="caseSensitive">
+        <span class="toggle-slider"></span>
+        <span class="toggle-label">Aa</span>
+      </label>
+    </header>
+
+    <!-- ===== SEARCH INPUT (animated gradient border on focus) ===== -->
+    <div class="search-wrapper">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Nhập từ khóa..."
+        autocomplete="off"
+        spellcheck="false"
+      >
+    </div>
+
+    <!-- ===== CONTROLS: Count + Navigation Buttons ===== -->
+    <div class="controls">
+      <div class="count-container">
+        <span id="count" class="count">0</span>
+        <span id="countTotal" class="count-total"></span>
+        <span id="countLabel" class="count-label">kết quả</span>
+      </div>
+      <div class="nav-buttons">
+        <button id="prevBtn" class="btn nav-btn" title="Kết quả trước (Shift+Enter)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2.5"
+               stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+        <button id="nextBtn" class="btn nav-btn" title="Kết quả tiếp (Enter)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2.5"
+               stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== NO RESULTS STATE ===== -->
+    <div id="noResults" class="no-results hidden">
+      <span class="sad-icon">😕</span>
+      <span>Không tìm thấy kết quả</span>
+    </div>
+
+    <!-- ===== FOOTER: Keyboard Hints ===== -->
+    <footer class="footer">
+      <span class="hint"><kbd>Enter</kbd> Tiếp</span>
+      <span class="hint-sep">•</span>
+      <span class="hint"><kbd>Shift</kbd>+<kbd>Enter</kbd> Lùi</span>
+    </footer>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
